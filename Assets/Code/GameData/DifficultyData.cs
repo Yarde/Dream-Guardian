@@ -6,8 +6,12 @@ namespace Code.StressSystem
     public class DifficultyData : ScriptableObject
     {
         public Color blendColor;
+        
         public float cutoffSize;
+        public float cutoffStressDecrease;
+        
         public float maxStress;
-        public float timeIncrement;
+        public int timeIncrement;
+        public int stressDecrement;
     }
 }
