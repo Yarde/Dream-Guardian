@@ -23,7 +23,7 @@ namespace Code
             while (!_cancellationToken.IsCancellationRequested)
             {
                 await UniTask.Delay(_stressManager.TimeIncrement);
-                _stressManager.CalculateStress();
+                _stressManager.ClockTick();
             }
         }
     }

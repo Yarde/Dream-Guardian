@@ -8,7 +8,7 @@ namespace Code.PlayerHand
     {
         private void Start()
         {
-            StressManager.Instance.OnStressUpdate += OnStressUpdate;
+            StressManager.Instance.OnClockTick += OnStressUpdate;
         }
         private void OnStressUpdate()
         {

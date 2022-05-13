@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Code.StressSystem
@@ -20,13 +21,22 @@ namespace Code.StressSystem
         
         private EncountersData _encountersData;
         private DifficultyData _difficultyData;
-        
-        public Action OnStressUpdate { get; set; }
+
+        public Dictionary<EncounterType, EncounterData> EncounterTypeToData;
+
+        public Action OnClockTick { get; set; }
+        public Action OnStressUpdated { get; set; }
         
         public StressManager()
         {
             _encountersData = Resources.Load<EncountersData>("Encounters/EncountersData");
             _difficultyData = Resources.Load<DifficultyData>("Difficulty/Medium");
+
+            EncounterTypeToData = new Dictionary<EncounterType, EncounterData>();
+            foreach (var encounter in _encountersData.encounters)
+            {
+                EncounterTypeToData.Add(encounter.type, encounter);
+            }
         }
         
         public float StressMeter { get; private set; }
@@ -37,13 +47,18 @@ namespace Code.StressSystem
         public Vector3 CutoffSize => Vector3.one * (_difficultyData.cutoffSize - _difficultyData.cutoffStressDecrease * StressMeter);
         public Color BlendColor => _difficultyData.blendColor;
         
-        public void CalculateStress()
+        public void ClockTick()
         {
             StressMeter = Mathf.Max(StressMeter - _difficultyData.stressDecrement, 0);
             
             Debug.Log($"Update Stress Manager {StressMeter}");
-            
-            OnStressUpdate?.Invoke();
+            OnClockTick?.Invoke();
+        }
+        
+        public void AddStress(float delta)
+        {
+            StressMeter += delta;
+            OnStressUpdated?.Invoke();
         }
     }
 

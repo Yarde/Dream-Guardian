@@ -16,6 +16,7 @@ namespace Code.Utils
                 renderingMaterial.SetInt(StencilComp, (int) CompareFunction.NotEqual);
                 return renderingMaterial;
             }
+            
         }
     }
 }
