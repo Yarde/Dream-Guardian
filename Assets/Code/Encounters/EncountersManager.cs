@@ -24,6 +24,10 @@ namespace Code.Encounters
                 {
                     stressDelta += encounter.GetStress();
                 }
+                else
+                {
+                    encounter.TryEnable();
+                }
             }
             
             StressManager.Instance.AddStress(stressDelta);

@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e792fc066ed94406964c02e63aa3723b, type: 3}
   m_Name: EncountersData
   m_EditorClassIdentifier: 
-  encounters: []
+  encounters:
+  - {fileID: 11400000, guid: 5270545b8b065ac44a955b7acfb5e3ce, type: 2}
+  - {fileID: 11400000, guid: 78fa5a17a203b8542b1484ed92e0af4c, type: 2}

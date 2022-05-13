@@ -9,5 +9,14 @@ namespace Code.Encounters
         public bool IsActive;
         public EncounterType Type;
         public abstract float GetStress();
+        public abstract void TryEnable();
+        
+        protected EncounterData _encounterData;
+        protected float _timeToActive;
+        
+        private void Awake()
+        {
+            _encounterData = StressManager.Instance.EncounterTypeToData[Type];
+        }
     }
 }
