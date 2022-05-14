@@ -7,26 +7,44 @@ namespace Code.Encounters
     public class WindowEncounter : BaseEncounter
     {
         [SerializeField] private Transform window;
-        [SerializeField] private float shakeDuration;
-        [SerializeField] private float shakeStrength;
+        [SerializeField] private float duration;
         [SerializeField] private float closeIntensity;
+        [SerializeField] private float ajarIntensity;
         [SerializeField] private float openIntensity;
         [SerializeField] private Light outsideLight;
+        
+        [SerializeField] private Color colorNormal;
+        [SerializeField] private Color colorRed;
+        
+        [SerializeField] private SpriteRenderer closed;
+        [SerializeField] private SpriteRenderer ajar;
+        [SerializeField] private SpriteRenderer open;
 
         protected override void Enable()
         {
             base.Enable();
-            window.DOShakePosition(shakeDuration, shakeStrength).WithCancellation(_token.Token);
-            outsideLight.DOIntensity(openIntensity, shakeDuration).WithCancellation(_token.Token);
+            ajar.gameObject.SetActive(true);
+            ajar.DOFade(0f, 0f);
+            ajar.DOFade(1f, 0.5f);
+            outsideLight.DOIntensity(ajarIntensity, duration).WithCancellation(_token.Token);
         }
         protected override void Activate()
         {
+            open.gameObject.SetActive(true);
+            open.DOFade(0f, 0f);
+            open.DOFade(1f, 0.5f);
+            outsideLight.DOIntensity(openIntensity, duration).WithCancellation(_token.Token);
+            outsideLight.color = colorRed;
             base.Activate();
         }
         protected override void Disable()
         {
             base.Disable();
+            ajar.DOFade(0f, 0f);
+            open.gameObject.SetActive(true);
+            open.DOFade(0f, 0f);
             outsideLight.intensity = closeIntensity;
+            outsideLight.color = colorNormal;
         }
     }
 }

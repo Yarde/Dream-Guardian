@@ -25,7 +25,7 @@ namespace Code.Encounters
             base.Activate();
             if (_token != null && !_token.IsCancellationRequested)
             {
-                teddy.DOShakePosition(shakeDuration, new Vector3(0, 0, shakeStrength)).WithCancellation(_token.Token);
+                teddy.DOShakePosition(shakeDuration, new Vector3(shakeStrength, shakeStrength, 0)).WithCancellation(_token.Token);
             }
         }
         protected override void Disable()

@@ -13,8 +13,6 @@ namespace Code.Encounters
         {
             base.Enable();
             ajarDoor.gameObject.SetActive(true);
-            openDoor.gameObject.SetActive(false);
-            closedDoor.SetActive(false);
             ajarDoor.DOFade(0f, 0f);
             ajarDoor.DOFade(1f, 0.5f);
         }
@@ -22,9 +20,6 @@ namespace Code.Encounters
         {
             base.Activate();
             openDoor.gameObject.SetActive(true);
-            openDoor.DOFade(0f, 0f);
-            ajarDoor.gameObject.SetActive(false);
-            closedDoor.SetActive(false);
             openDoor.DOFade(0f, 0f);
             openDoor.DOFade(1f, 0.5f);
         }

@@ -378,7 +378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -1088,10 +1088,22 @@ PrefabInstance:
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: -7554531680556305359, guid: 08bf6c353b2eca843a510deaf02d9691, type: 2}
+    - target: {fileID: 3302583041630314311, guid: 907a35ebd0339aa4eb46f7a9879920d1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302583041630314311, guid: 907a35ebd0339aa4eb46f7a9879920d1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.32
+      objectReference: {fileID: 0}
     - target: {fileID: 4273321096050761754, guid: 907a35ebd0339aa4eb46f7a9879920d1, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 237128b29a3a6804d8e8712616a57c92, type: 3}
+    - target: {fileID: 6954260923569385628, guid: 907a35ebd0339aa4eb46f7a9879920d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 907a35ebd0339aa4eb46f7a9879920d1, type: 3}
 --- !u!1001 &730272363151103872
@@ -1174,9 +1186,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1645486201}
     m_Modifications:
-    - target: {fileID: 1375785000111728151, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
-      propertyPath: m_Intensity
-      value: 0
+    - target: {fileID: 1375785000111728144, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1375785000658784096, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -1188,7 +1200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1375785000658784097, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.54
+      value: 11.44
       objectReference: {fileID: 0}
     - target: {fileID: 1375785000658784097, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1230,13 +1242,61 @@ PrefabInstance:
       propertyPath: m_Name
       value: Window
       objectReference: {fileID: 0}
+    - target: {fileID: 1375785000658784102, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
+      propertyPath: colorRed.b
+      value: 0.20060521
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375785000658784102, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
+      propertyPath: colorRed.g
+      value: 0.20060521
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375785000658784102, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
+      propertyPath: colorRed.r
+      value: 0.8679245
+      objectReference: {fileID: 0}
     - target: {fileID: 1375785000658784103, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
       propertyPath: m_Size.x
-      value: 2.7897158
+      value: 3.5331087
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375785000658784103, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
+      propertyPath: m_Size.y
+      value: 4.2311735
       objectReference: {fileID: 0}
     - target: {fileID: 1375785000658784103, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
       propertyPath: m_Offset.x
-      value: -2.9966922
+      value: 0.112041
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375785000658784103, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.047237873
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375785000848683772, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375785000848683774, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
+      propertyPath: m_Name
+      value: IconAjar
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375785000848683774, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3080956616841329819, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7700193472496797675, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7700193472496797675, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8de6d8c90f2d3f2439e268ce78de1735, type: 2}
+    - target: {fileID: 7941990409745786059, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}

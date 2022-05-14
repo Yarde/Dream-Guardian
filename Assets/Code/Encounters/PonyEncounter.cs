@@ -6,7 +6,8 @@ namespace Code.Encounters
 {
     public class PonyEncounter : BaseEncounter
     {
-        [SerializeField] private Transform pony;
+        [SerializeField] private SpriteRenderer pony;
+        [SerializeField] private SpriteRenderer spookyPony;
         [SerializeField] private float shakeDuration;
         [SerializeField] private float shakeStrength;
         [SerializeField] private float strongShakeDuration;
@@ -15,17 +16,24 @@ namespace Code.Encounters
         protected override void Enable()
         {
             base.Enable();
-            pony.DOShakeRotation(shakeDuration, new Vector3(0, 0, shakeStrength)).WithCancellation(_token.Token);
+            pony.transform.DOShakeRotation(shakeDuration, new Vector3(0, 0, shakeStrength)).WithCancellation(_token.Token);
         }
         protected override void Activate()
         {
             base.Activate();
-            pony.DOShakeRotation(strongShakeDuration, new Vector3(0, 0, strongShakeStrength)).WithCancellation(_token.Token);
+            spookyPony.gameObject.SetActive(true);
+            spookyPony.DOFade(0f, 0f);
+            spookyPony.DOFade(1f, 0.5f);
+            pony.gameObject.SetActive(false);
+            spookyPony.transform.DOShakeRotation(strongShakeDuration, new Vector3(0, 0, strongShakeStrength)).WithCancellation(_token.Token);
         }
         protected override void Disable()
         {
             base.Disable();
-            pony.DOLocalRotate(Vector3.zero, 0.1f).WithCancellation(_token.Token);
+            spookyPony.gameObject.SetActive(false);
+            spookyPony.DOFade(0f, 0f);
+            pony.gameObject.SetActive(true);
+            pony.transform.DOLocalRotate(Vector3.zero, 0.1f).WithCancellation(_token.Token);
         }
     }
 }

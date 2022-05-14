@@ -25,8 +25,8 @@ namespace Code.Encounters
         protected override void Disable()
         {
             base.Disable();
-            silhouette.gameObject.SetActive(true);
-            leg.gameObject.SetActive(true);
+            silhouette.gameObject.SetActive(false);
+            leg.gameObject.SetActive(false);
             silhouette.DOFade(0f, 0f);
             leg.DOFade(0f, 0f);
         }
