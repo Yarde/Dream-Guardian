@@ -51,7 +51,7 @@ MonoBehaviour:
   audioSource: {fileID: 437452107860942836}
   Type: 7
   rug: {fileID: 3101480620322108699}
-  rugWithHand: {fileID: 7605400376908712222}
+  rugWithHand: {fileID: 449299974121646479}
   handOnBlanket: {fileID: 2629590336454106143}
 --- !u!82 &437452107860942836
 AudioSource:

@@ -5188,8 +5188,8 @@ MonoBehaviour:
   audioSource: {fileID: 3759047199308097168}
   Type: 2
   closedDoor: {fileID: 8520305916078380700}
-  ajarDoor: {fileID: 3759047197634751379}
-  openDoor: {fileID: 3759047197716410817}
+  ajarDoor: {fileID: 4627133888579889419}
+  openDoor: {fileID: 1212795169327637218}
 --- !u!61 &3759047199308097171
 BoxCollider2D:
   m_ObjectHideFlags: 0
