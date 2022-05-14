@@ -13,5 +13,12 @@ MonoBehaviour:
   m_Name: EncountersData
   m_EditorClassIdentifier: 
   encounters:
+  - {fileID: 11400000, guid: 94bb939da28f1db408b1656c727690dd, type: 2}
+  - {fileID: 11400000, guid: 8a651a66fa2c5fb46968d43237743026, type: 2}
   - {fileID: 11400000, guid: 5270545b8b065ac44a955b7acfb5e3ce, type: 2}
+  - {fileID: 11400000, guid: 80d228995cc670a4ea29cde38e13f540, type: 2}
+  - {fileID: 11400000, guid: 89b7669a4599dd34e9a3c1f50da5ec01, type: 2}
+  - {fileID: 11400000, guid: 2c43f60e0b2fc8a4f9bfb1ecdbf599b8, type: 2}
+  - {fileID: 11400000, guid: 54356b4f2178b0046962e50246d9f9de, type: 2}
+  - {fileID: 11400000, guid: ddd6641bdbf54404c962d9517300ffab, type: 2}
   - {fileID: 11400000, guid: 78fa5a17a203b8542b1484ed92e0af4c, type: 2}
