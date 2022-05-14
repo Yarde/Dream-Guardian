@@ -1,11 +1,20 @@
-﻿using Code.StressSystem;
+﻿using System.Threading;
+using Code.StressSystem;
+using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Code.Encounters
 {
     public class LightEncounter : BaseEncounter
     {
-        [SerializeField] private SpriteRenderer image;
+        [SerializeField] private float flickerTime;
+        [SerializeField] private float flickerIntensityMin;
+        [SerializeField] private float flickerIntensityMax;
+        [SerializeField] private GameObject stateOn;
+        [SerializeField] private Light lightBulb;
+
+        private CancellationTokenSource _token;
 
         public override float GetStress()
         {
@@ -18,7 +27,7 @@ namespace Code.Encounters
             if (_timeToActive <= 0)
             {
                 IsActive = true;
-                image.color = Color.blue;
+                TryCancelAndDispose();
             }
             return _encounterData.stressGeneratedPerTickInactive;
         }
@@ -30,7 +39,22 @@ namespace Code.Encounters
                 IsEnabled = true;
                 _timeToActive = _encounterData.ticksToActivate;
                 
-                image.color = Color.cyan;
+                stateOn.SetActive(true);
+                _token = new CancellationTokenSource();
+                StartFlickering().Forget();
+            }
+        }
+        private async UniTask StartFlickering()
+        {
+            lightBulb.DOIntensity(flickerIntensityMax, flickerTime);
+            await UniTask.Delay((int)(flickerTime * 1000));
+            
+            while (_token != null && !_token.IsCancellationRequested)
+            {
+                lightBulb.DOIntensity(flickerIntensityMin, flickerTime);
+                await UniTask.Delay((int)(flickerTime * 1000));
+                lightBulb.DOIntensity(flickerIntensityMax, flickerTime);
+                await UniTask.Delay((int)(flickerTime * 1000));
             }
         }
         public void OnMouseDown()
@@ -38,7 +62,17 @@ namespace Code.Encounters
             _lastDeactivatedTime = StressManager.Instance.TimePassed;
             IsActive = false;
             IsEnabled = false;
-            image.color = Color.white;
+            stateOn.SetActive(false);
+            TryCancelAndDispose();
+        }
+        private void TryCancelAndDispose()
+        {
+            if (_token != null)
+            {
+                _token.Cancel();
+                _token.Dispose();
+                _token = null;
+            }
         }
     }
 }

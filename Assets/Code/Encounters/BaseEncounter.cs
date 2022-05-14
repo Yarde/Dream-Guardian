@@ -16,7 +16,7 @@ namespace Code.Encounters
         protected float _timeToActive;
         protected float _lastDeactivatedTime;
         
-        private void Awake()
+        protected virtual void Awake()
         {
             _encounterData = StressManager.Instance.EncounterTypeToData[Type];
         }
