@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Closet
   m_EditorClassIdentifier: 
   type: 2
-  ticksToSpawn: 200
+  ticksToSpawn: 280
   ticksToActivate: 50
   stressGeneratedPerTickInactive: 0.02
   stressGeneratedPerTickActive: 0.5

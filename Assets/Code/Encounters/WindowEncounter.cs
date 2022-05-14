@@ -25,17 +25,17 @@ namespace Code.Encounters
             base.Enable();
             ajar.gameObject.SetActive(true);
             ajar.DOFade(0f, 0f);
-            ajar.DOFade(1f, 0.5f);
+            ajar.DOFade(1f, 0.2f);
             outsideLight.DOIntensity(ajarIntensity, duration).WithCancellation(_token.Token);
         }
         protected override void Activate()
         {
+            base.Activate();
             open.gameObject.SetActive(true);
             open.DOFade(0f, 0f);
-            open.DOFade(1f, 0.5f);
+            open.DOFade(1f, 0.2f);
             outsideLight.DOIntensity(openIntensity, duration).WithCancellation(_token.Token);
             outsideLight.color = colorRed;
-            base.Activate();
         }
         protected override void Disable()
         {

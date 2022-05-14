@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Teddy
   m_EditorClassIdentifier: 
   type: 4
-  ticksToSpawn: 150
+  ticksToSpawn: 250
   ticksToActivate: 50
   stressGeneratedPerTickInactive: 0.02
   stressGeneratedPerTickActive: 0.5

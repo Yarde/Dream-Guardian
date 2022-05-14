@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Door
   m_EditorClassIdentifier: 
   type: 8
-  ticksToSpawn: 230
+  ticksToSpawn: 430
   ticksToActivate: 50
   stressGeneratedPerTickInactive: 0.02
   stressGeneratedPerTickActive: 0.5
