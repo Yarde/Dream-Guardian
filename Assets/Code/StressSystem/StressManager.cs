@@ -40,6 +40,7 @@ namespace Code.StressSystem
         }
         
         public float StressMeter { get; private set; }
+        public float StressRatio => StressMeter / _difficultyData.maxStress;
 
         public float TimePassed { get; private set; } = 0;
         public int TimeIncrement => _difficultyData.timeIncrement;
@@ -60,6 +61,12 @@ namespace Code.StressSystem
         public void AddStress(float delta)
         {
             StressMeter += delta;
+
+            if (StressRatio >= 1f)
+            {
+                Debug.LogError("You lost!");
+            }
+            
             OnStressUpdated?.Invoke();
         }
     }

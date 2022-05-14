@@ -1,13 +1,11 @@
-﻿using System;
-using Code.StressSystem;
+﻿using Code.StressSystem;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Code.Encounters
 {
     public class LightEncounter : BaseEncounter
     {
-        [SerializeField] private Image image;
+        [SerializeField] private SpriteRenderer image;
 
         public override float GetStress()
         {

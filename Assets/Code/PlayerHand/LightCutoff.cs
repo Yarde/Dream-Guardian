@@ -1,23 +1,27 @@
 using Code.StressSystem;
-using DG.Tweening;
+using Code.Utils;
 using UnityEngine;
 
 namespace Code.PlayerHand
 {
     public class LightCutoff : MonoBehaviour
     {
+        [SerializeField] private Camera mainCamera;
+        [SerializeField] private Light playerLight;
+        [SerializeField] private float baseIntensity;
+        
         private void Start()
         {
             StressManager.Instance.OnClockTick += OnStressUpdate;
         }
         private void OnStressUpdate()
         {
-            transform.DOScale(StressManager.Instance.CutoffSize, 0.1f);
+            playerLight.intensity = baseIntensity * (1 - StressManager.Instance.StressRatio * 0.75f);
         }
 
         private void Update()
         {
-            transform.position = Input.mousePosition;
+            transform.position = mainCamera.ScreenToWorldPoint(Input.mousePosition.WithZ(9.36f)).WithZ(5f);
         }
     }
 }
