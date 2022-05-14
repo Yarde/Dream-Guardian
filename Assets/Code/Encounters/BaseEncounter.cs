@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace Code.Encounters
 {
-    [RequireComponent(typeof(Collider))]
+    [RequireComponent(typeof(Collider2D))]
     public abstract class BaseEncounter : MonoBehaviour
     {
-        [SerializeField] protected AudioSource audio;
+        [SerializeField] protected AudioSource audioSource;
         public bool IsEnabled => _isEnabled;
         
         public EncounterType Type;
@@ -26,26 +26,28 @@ namespace Code.Encounters
         
         protected virtual void Enable()
         {
+            Debug.Log($"Enabled {name}");
             if (_encounterData.onEnableAudio != null)
             {
-                audio.clip = _encounterData.onEnableAudio;
-                audio.Play();
+                audioSource.clip = _encounterData.onEnableAudio;
+                audioSource.Play();
             }
         }
         protected virtual void Activate()
         {
             if (_encounterData.onActiveAudio != null)
             {
-                audio.clip = _encounterData.onActiveAudio;
-                audio.Play();
+                audioSource.clip = _encounterData.onActiveAudio;
+                audioSource.Play();
             }
         }
         protected virtual void Disable()
         {
+            Debug.Log($"Disabled {name}");
             if (_encounterData.onDisableAudio != null)
             {
-                audio.clip = _encounterData.onDisableAudio;
-                audio.Play();
+                audioSource.clip = _encounterData.onDisableAudio;
+                audioSource.Play();
             }
         }
         

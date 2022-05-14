@@ -6,6 +6,7 @@ namespace Code.PlayerHand
 {
     public class LightCutoff : MonoBehaviour
     {
+        [SerializeField] private Transform roomPosition;
         [SerializeField] private Camera mainCamera;
         [SerializeField] private Light playerLight;
         [SerializeField] private float baseIntensity;
@@ -21,7 +22,7 @@ namespace Code.PlayerHand
 
         private void Update()
         {
-            transform.position = mainCamera.ScreenToWorldPoint(Input.mousePosition.WithZ(9.36f)).WithZ(5f);
+            transform.localPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition.WithZ(roomPosition.position.z)).WithZ(-3f);
         }
     }
 }

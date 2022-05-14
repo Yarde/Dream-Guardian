@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Window
   m_EditorClassIdentifier: 
   type: 1
-  timeToSpawn: 10
-  timeLimit: 4
-  stressGeneratedInactive: 1
-  stressGeneratedActive: 12
+  ticksToSpawn: 100
+  ticksToActivate: 20
+  stressGeneratedPerTickInactive: 0.02
+  stressGeneratedPerTickActive: 0.5
+  spawnCost: 180
+  onEnableAudio: {fileID: 0}
+  onActiveAudio: {fileID: 0}
+  onDisableAudio: {fileID: 0}

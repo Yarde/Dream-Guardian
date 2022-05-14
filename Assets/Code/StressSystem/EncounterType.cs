@@ -4,6 +4,11 @@ namespace Code.StressSystem
     {
         Light,
         Window,
-        Door
+        Closet,
+        Mirror,
+        TeddyBear,
+        Pony,
+        Painting,
+        Rug
     }
 }
