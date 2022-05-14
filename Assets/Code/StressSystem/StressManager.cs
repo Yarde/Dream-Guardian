@@ -22,7 +22,7 @@ namespace Code.StressSystem
         
         private EncountersData _encountersData;
         private DifficultyData _difficultyData;
-        private float _spawnProbablitiy = 80;
+        private float _spawnProbability = 160;
 
         public Dictionary<EncounterType, EncounterData> EncounterTypeToData;
 
@@ -48,17 +48,16 @@ namespace Code.StressSystem
 
         public float TimePassed { get; private set; } = 0;
         public int TimeIncrement => _difficultyData.ticksTimeMilliseconds;
-
-        public Vector3 CutoffSize => Vector3.one * (_difficultyData.cutoffSize - _difficultyData.cutoffStressDecrease * StressMeter);
+        
         public Color BlendColor => _difficultyData.blendColor;
         public bool CanSpawn(float spawnCost)
         {
             float random = Random.Range(0f, 100f);
-            float difference = _spawnProbablitiy - spawnCost;
+            float difference = _spawnProbability - spawnCost;
 
             if (random < difference)
             {
-                _spawnProbablitiy -= spawnCost;
+                _spawnProbability -= spawnCost;
                 return true;
             }
 
@@ -69,9 +68,9 @@ namespace Code.StressSystem
         {
             TimePassed++;
             StressMeter = Mathf.Max(StressMeter - _difficultyData.stressDecrementPerTick, 0);
-            _spawnProbablitiy += _difficultyData.spawnProbabilityIncrementPerTick + TimePassed * _difficultyData.spawnProbabilityMultiplier;
+            _spawnProbability += _difficultyData.spawnProbabilityIncrementPerTick + TimePassed * _difficultyData.spawnProbabilityMultiplier;
             
-            Debug.Log($"StressMeter: {StressMeter}, TimePassed: {TimePassed}, Spawn Probability: {_spawnProbablitiy}");
+            Debug.Log($"StressMeter: {StressMeter}, TimePassed: {TimePassed}, Spawn Probability: {_spawnProbability}");
             OnClockTick?.Invoke();
         }
         
