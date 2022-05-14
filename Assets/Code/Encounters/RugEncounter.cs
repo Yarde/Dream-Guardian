@@ -4,15 +4,6 @@ namespace Code.Encounters
 {
     public class RugEncounter : BaseEncounter
     {
-        /*[SerializeField] private Transform rug;
-        [SerializeField] private Transform hand;
-        [SerializeField] private Vector3 rugStartPosition;
-        [SerializeField] private Vector3 rugEndPosition;
-        [SerializeField] private float rugMoveDuration;
-        [SerializeField] private Vector3 handStartPosition;
-        [SerializeField] private Vector3 handEndPosition;
-        [SerializeField] private float handMoveDuration;*/
-        
         [SerializeField] private GameObject rug;
         [SerializeField] private GameObject rugWithHand;
         [SerializeField] private GameObject handOnBlanket;
@@ -22,13 +13,7 @@ namespace Code.Encounters
             base.Enable();
             rugWithHand.SetActive(true);
         }
-        /*private async UniTask Animate()
-        {
-            rug.DOLocalMove(rugEndPosition, rugMoveDuration);
-            await UniTask.Delay((int)(rugMoveDuration * 1000));
-            hand.DOLocalMove(handEndPosition, handMoveDuration);
-        }*/
-        
+
         protected override void Activate()
         {
             base.Activate();

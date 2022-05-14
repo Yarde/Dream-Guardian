@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Code.Encounters
@@ -15,8 +16,8 @@ namespace Code.Encounters
         protected override void Enable()
         {
             base.Enable();
-            window.DOShakePosition(shakeDuration, shakeStrength);
-            outsideLight.DOIntensity(openIntensity, shakeDuration);
+            window.DOShakePosition(shakeDuration, shakeStrength).WithCancellation(_token.Token);
+            outsideLight.DOIntensity(openIntensity, shakeDuration).WithCancellation(_token.Token);
         }
         protected override void Activate()
         {
