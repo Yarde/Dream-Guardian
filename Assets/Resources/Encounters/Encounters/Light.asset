@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Light
   m_EditorClassIdentifier: 
   type: 0
-  timeToSpawn: 0
-  timeLimit: 5
-  stressGeneratedInactive: 1
-  stressGeneratedActive: 5
+  ticksToSpawn: 0
+  ticksToActivate: 30
+  stressGeneratedPerTickInactive: 0.01
+  stressGeneratedPerTickActive: 0.5
+  spawnCost: 200

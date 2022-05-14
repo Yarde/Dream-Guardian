@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182d7e1cc6274cc29fdfc6194aa64f47, type: 3}
   m_Name: Medium
   m_EditorClassIdentifier: 
-  blendColor: {r: 0, g: 0, b: 0, a: 0.78431374}
+  blendColor: {r: 0.078431375, g: 0.078431375, b: 0.078431375, a: 1}
   cutoffSize: 3
   cutoffStressDecrease: 0.01
   maxStress: 100
-  timeIncrement: 1000
-  stressDecrement: 1
+  ticksTimeMilliseconds: 100
+  stressDecrementPerTick: 0.1
+  spawnProbabilityIncrementPerTick: 1
+  spawnProbabilityMultiplier: 0.01

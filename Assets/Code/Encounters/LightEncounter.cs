@@ -25,7 +25,7 @@ namespace Code.Encounters
         
         public override void TryEnable()
         {
-            if (_encounterData.ticksToSpawn <= StressManager.Instance.TimePassed)
+            if (_encounterData.ticksToSpawn <= StressManager.Instance.TimePassed &&  StressManager.Instance.CanSpawn(_encounterData.spawnCost))
             {
                 IsEnabled = true;
                 _timeToActive = _encounterData.ticksToActivate;
