@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Painting
   m_EditorClassIdentifier: 
   type: 6
-  ticksToSpawn: 250
+  ticksToSpawn: 450
   ticksToActivate: 50
   stressGeneratedPerTickInactive: 0.02
   stressGeneratedPerTickActive: 0.5

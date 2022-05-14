@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Window
   m_EditorClassIdentifier: 
   type: 1
-  ticksToSpawn: 100
+  ticksToSpawn: 150
   ticksToActivate: 50
   stressGeneratedPerTickInactive: 0.02
   stressGeneratedPerTickActive: 0.5
