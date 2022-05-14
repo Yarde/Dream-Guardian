@@ -17,6 +17,6 @@ MonoBehaviour:
   cutoffStressDecrease: 0.01
   maxStress: 100
   ticksTimeMilliseconds: 100
-  stressDecrementPerTick: 0.05
+  stressDecrementPerTick: 0.1
   spawnProbabilityIncrementPerTick: 1
-  spawnProbabilityMultiplier: 0.015
+  spawnProbabilityMultiplier: 0.01

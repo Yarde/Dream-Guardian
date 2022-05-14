@@ -34,8 +34,12 @@ namespace Code.Music
                     break;
                 }
             }
-
-            audioSource.clip = clip;
+            
+            if (audioSource.clip != clip)
+            {
+                audioSource.clip = clip;
+                audioSource.Play();
+            }
         }
     }
 }
