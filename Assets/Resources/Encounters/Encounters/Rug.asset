@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Rug
   m_EditorClassIdentifier: 
   type: 7
-  ticksToSpawn: 0
-  ticksToActivate: 30
-  stressGeneratedPerTickInactive: 0.01
+  ticksToSpawn: 350
+  ticksToActivate: 50
+  stressGeneratedPerTickInactive: 0.1
   stressGeneratedPerTickActive: 0.5
-  spawnCost: 200
+  spawnCost: 160
   onEnableAudio: {fileID: 8300000, guid: a95545f3dacef784faa0a57ec545a331, type: 3}
   onActiveAudio: {fileID: 8300000, guid: e87c8e6d517c0e149ab55012444a4248, type: 3}
   onDisableAudio: {fileID: 8300000, guid: a95545f3dacef784faa0a57ec545a331, type: 3}

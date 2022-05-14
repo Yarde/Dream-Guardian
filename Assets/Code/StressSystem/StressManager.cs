@@ -17,7 +17,6 @@ namespace Code.StressSystem
                 }
                 return _instance;
             }
-            
         }
         
         private EncountersData _encountersData;
@@ -28,6 +27,7 @@ namespace Code.StressSystem
 
         public Action OnClockTick { get; set; }
         public Action OnStressUpdated { get; set; }
+        public Action OnLost { get; set; }
         
         public StressManager()
         {
@@ -50,6 +50,12 @@ namespace Code.StressSystem
         public int TimeIncrement => _difficultyData.ticksTimeMilliseconds;
         
         public Color BlendColor => _difficultyData.blendColor;
+
+        public void Restart()
+        {
+            _instance = null;
+        }
+        
         public bool CanSpawn(float spawnCost, float lastDeactivatedTime)
         {
             float random = Random.Range(0f, 100f);
@@ -81,6 +87,7 @@ namespace Code.StressSystem
             if (StressRatio >= 1f)
             {
                 Debug.LogError("You lost!");
+                OnLost?.Invoke();
             }
             
             OnStressUpdated?.Invoke();

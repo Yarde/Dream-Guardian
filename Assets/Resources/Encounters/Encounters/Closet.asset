@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Closet
   m_EditorClassIdentifier: 
   type: 2
-  ticksToSpawn: 0
-  ticksToActivate: 30
-  stressGeneratedPerTickInactive: 0.01
+  ticksToSpawn: 200
+  ticksToActivate: 50
+  stressGeneratedPerTickInactive: 0.1
   stressGeneratedPerTickActive: 0.5
-  spawnCost: 200
+  spawnCost: 180
   onEnableAudio: {fileID: 8300000, guid: 02c8f07205684da4380ebc423488d310, type: 3}
   onActiveAudio: {fileID: 8300000, guid: effd52fe3dc7f5c48bd7f4aee056fc02, type: 3}
   onDisableAudio: {fileID: 8300000, guid: 02c8f07205684da4380ebc423488d310, type: 3}

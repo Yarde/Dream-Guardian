@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Teddy
   m_EditorClassIdentifier: 
   type: 4
-  ticksToSpawn: 0
-  ticksToActivate: 30
-  stressGeneratedPerTickInactive: 0.01
+  ticksToSpawn: 150
+  ticksToActivate: 50
+  stressGeneratedPerTickInactive: 0.1
   stressGeneratedPerTickActive: 0.5
-  spawnCost: 200
+  spawnCost: 180
   onEnableAudio: {fileID: 8300000, guid: 2c99818a50dc7a941ae5cecaea207dbb, type: 3}
   onActiveAudio: {fileID: 8300000, guid: a0f17a373915bcd43b21412bab5f5fa0, type: 3}
   onDisableAudio: {fileID: 8300000, guid: 2c99818a50dc7a941ae5cecaea207dbb, type: 3}

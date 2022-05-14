@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Code.StressSystem;
 using UnityEngine;
 
 namespace Code.Music
@@ -13,6 +14,28 @@ namespace Code.Music
         {
             audioSource.clip = musicFiles[0];
             audioSource.Play();
+
+            StressManager.Instance.OnStressUpdated += OnStressChanged;
+        }
+        
+        private void OnStressChanged()
+        {
+            AudioClip clip = musicFiles[0];
+
+            for (var i = 0; i < stressThreshold.Count; i++)
+            {
+                float stressLevel = stressThreshold[i];
+                if (StressManager.Instance.StressMeter > stressLevel)
+                {
+                    clip = musicFiles[i];
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            audioSource.clip = clip;
         }
     }
 }

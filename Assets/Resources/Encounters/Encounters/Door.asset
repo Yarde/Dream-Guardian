@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Door
   m_EditorClassIdentifier: 
   type: 8
-  ticksToSpawn: 0
-  ticksToActivate: 30
-  stressGeneratedPerTickInactive: 0.01
+  ticksToSpawn: 230
+  ticksToActivate: 50
+  stressGeneratedPerTickInactive: 0.1
   stressGeneratedPerTickActive: 0.5
-  spawnCost: 200
+  spawnCost: 180
   onEnableAudio: {fileID: 8300000, guid: cc83dad6c117ea043964fe58d66a80fb, type: 3}
   onActiveAudio: {fileID: 8300000, guid: 434baeeccba194b4b96f082b59f762f1, type: 3}
   onDisableAudio: {fileID: 8300000, guid: cc83dad6c117ea043964fe58d66a80fb, type: 3}

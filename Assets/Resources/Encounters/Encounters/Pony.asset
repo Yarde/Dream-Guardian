@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Pony
   m_EditorClassIdentifier: 
   type: 5
-  ticksToSpawn: 0
-  ticksToActivate: 30
-  stressGeneratedPerTickInactive: 0.01
+  ticksToSpawn: 120
+  ticksToActivate: 50
+  stressGeneratedPerTickInactive: 0.1
   stressGeneratedPerTickActive: 0.5
-  spawnCost: 200
+  spawnCost: 180
   onEnableAudio: {fileID: 8300000, guid: d748a0c5029b45a409083ab0e385ba7c, type: 3}
   onActiveAudio: {fileID: 8300000, guid: a81cc664726dfca4492665d7b0da5e6a, type: 3}
   onDisableAudio: {fileID: 8300000, guid: d748a0c5029b45a409083ab0e385ba7c, type: 3}

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Mirror
   m_EditorClassIdentifier: 
   type: 3
-  ticksToSpawn: 0
-  ticksToActivate: 30
-  stressGeneratedPerTickInactive: 0.01
+  ticksToSpawn: 310
+  ticksToActivate: 50
+  stressGeneratedPerTickInactive: 0.1
   stressGeneratedPerTickActive: 0.5
-  spawnCost: 200
+  spawnCost: 180
   onEnableAudio: {fileID: 8300000, guid: 21408397fd503044a8e522db434aecb7, type: 3}
   onActiveAudio: {fileID: 8300000, guid: 862a2f1961ac1774a80872dad79aefc7, type: 3}
   onDisableAudio: {fileID: 8300000, guid: 2a46d5f79e80162408b13d60c99976ed, type: 3}
