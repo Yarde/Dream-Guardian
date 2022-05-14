@@ -13,5 +13,6 @@ namespace Code.StressSystem
         public float maxStress;
         public int ticksTimeMilliseconds;
         public float stressDecrementPerTick;
+        public float spawnProbabilityIncrementPerTick;
     }
 }

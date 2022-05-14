@@ -8,7 +8,8 @@ namespace Code.StressSystem
         public EncounterType type;
         public float ticksToSpawn;
         public float ticksToActivate;
-        public float stressGeneratedInactive;
-        public float stressGeneratedActive;
+        public float stressGeneratedPerTickInactive;
+        public float stressGeneratedPerTickActive;
+        public float spawnCost;
     }
 }

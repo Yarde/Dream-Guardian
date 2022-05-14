@@ -11,7 +11,7 @@ namespace Code.Encounters
         {
             if (IsActive)
             {
-                return _encounterData.stressGeneratedActive;
+                return _encounterData.stressGeneratedPerTickActive;
             }
 
             _timeToActive--;
@@ -20,7 +20,7 @@ namespace Code.Encounters
                 IsActive = true;
                 image.color = Color.blue;
             }
-            return _encounterData.stressGeneratedInactive;
+            return _encounterData.stressGeneratedPerTickInactive;
         }
         
         public override void TryEnable()
