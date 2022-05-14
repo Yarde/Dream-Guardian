@@ -1,5 +1,6 @@
 using Code.StressSystem;
 using Code.Utils;
+using DG.Tweening;
 using UnityEngine;
 
 namespace Code.PlayerHand
@@ -13,11 +14,17 @@ namespace Code.PlayerHand
         
         private void Start()
         {
-            StressManager.Instance.OnClockTick += OnStressUpdate;
+            StressManager.Instance.OnClockTick += OnClockTick;
+            StressManager.Instance.OnStressUpdated += OnStressUpdate;
         }
-        private void OnStressUpdate()
+        private void OnClockTick()
         {
             playerLight.intensity = baseIntensity * (1 - StressManager.Instance.StressRatio * 0.75f);
+        }
+        
+        private void OnStressUpdate()
+        {
+            roomPosition.DOLocalMove(new Vector3(roomPosition.position.x, roomPosition.position.y, 14.13f + StressManager.Instance.StressMeter / 25), 0.1f);
         }
 
         private void Update()

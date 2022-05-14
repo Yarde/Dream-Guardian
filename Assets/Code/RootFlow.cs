@@ -49,11 +49,16 @@ namespace Code
         private async UniTask RunLoop()
         {
             RenderSettings.ambientLight = Color.white;
+            
+            introScreen.SetActive(true);
+            await UniTask.Delay(1000);
+
             for (int i = 255; i > 15; i--)
             {
                 RenderSettings.ambientLight = new Color(i/255f, i/255f, i/255f);
                 await UniTask.Delay(10);
             }
+            introScreen.SetActive(false);
 
             while (!_cancellationToken.IsCancellationRequested)
             {
