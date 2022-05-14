@@ -12,6 +12,7 @@ namespace Code
         private StressManager _stressManager;
         private CancellationTokenSource _cancellationToken;
 
+        [SerializeField] private GameObject introScreen;
         [SerializeField] private GameObject loseScreen;
         [SerializeField] private TextMeshProUGUI points;
 
@@ -27,8 +28,8 @@ namespace Code
             _cancellationToken = new CancellationTokenSource();
             RunLoop().Forget();
         }
-        
-        public void OnLost()
+
+        private void OnLost()
         {
             _cancellationToken.Cancel();
             _cancellationToken.Dispose();
@@ -47,6 +48,13 @@ namespace Code
 
         private async UniTask RunLoop()
         {
+            RenderSettings.ambientLight = Color.white;
+            for (int i = 255; i > 15; i--)
+            {
+                RenderSettings.ambientLight = new Color(i/255f, i/255f, i/255f);
+                await UniTask.Delay(10);
+            }
+
             while (!_cancellationToken.IsCancellationRequested)
             {
                 await UniTask.Delay(_stressManager.TimeIncrement);
