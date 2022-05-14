@@ -50,12 +50,12 @@ namespace Code.StressSystem
         public int TimeIncrement => _difficultyData.ticksTimeMilliseconds;
         
         public Color BlendColor => _difficultyData.blendColor;
-        public bool CanSpawn(float spawnCost)
+        public bool CanSpawn(float spawnCost, float lastDeactivatedTime)
         {
             float random = Random.Range(0f, 100f);
             float difference = _spawnProbability - spawnCost;
 
-            if (random < difference)
+            if (random < difference + TimePassed - lastDeactivatedTime)
             {
                 _spawnProbability -= spawnCost;
                 return true;

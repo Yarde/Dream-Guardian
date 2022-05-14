@@ -11,5 +11,9 @@ namespace Code.StressSystem
         public float stressGeneratedPerTickInactive;
         public float stressGeneratedPerTickActive;
         public float spawnCost;
+
+        public AudioClip onEnableAudio;
+        public AudioClip onActiveAudio;
+        public AudioClip onDisableAudio;
     }
 }
