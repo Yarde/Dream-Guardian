@@ -43,7 +43,7 @@ namespace Code.StressSystem
         public float StressRatio => StressMeter / _difficultyData.maxStress;
 
         public float TimePassed { get; private set; } = 0;
-        public int TimeIncrement => _difficultyData.timeIncrement;
+        public int TimeIncrement => _difficultyData.ticksTimeMilliseconds;
 
         public Vector3 CutoffSize => Vector3.one * (_difficultyData.cutoffSize - _difficultyData.cutoffStressDecrease * StressMeter);
         public Color BlendColor => _difficultyData.blendColor;
@@ -52,7 +52,7 @@ namespace Code.StressSystem
         public void ClockTick()
         {
             TimePassed++;
-            StressMeter = Mathf.Max(StressMeter - _difficultyData.stressDecrement, 0);
+            StressMeter = Mathf.Max(StressMeter - _difficultyData.stressDecrementPerTick, 0);
             
             Debug.Log($"Update Stress Manager {StressMeter}");
             OnClockTick?.Invoke();

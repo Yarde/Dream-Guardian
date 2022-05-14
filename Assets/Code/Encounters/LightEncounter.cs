@@ -25,18 +25,17 @@ namespace Code.Encounters
         
         public override void TryEnable()
         {
-            if (_encounterData.timeToSpawn <= StressManager.Instance.TimePassed)
+            if (_encounterData.ticksToSpawn <= StressManager.Instance.TimePassed)
             {
                 IsEnabled = true;
-                _timeToActive = _encounterData.timeLimit;
+                _timeToActive = _encounterData.ticksToActivate;
                 
                 image.color = Color.cyan;
             }
         }
         public void OnMouseDown()
         {
-            Debug.LogError("Click");
-            
+            _lastDeactivatedTime = StressManager.Instance.TimePassed;
             IsActive = false;
             IsEnabled = false;
             image.color = Color.white;

@@ -14,6 +14,7 @@ namespace Code.Encounters
 
         protected EncounterData _encounterData;
         protected float _timeToActive;
+        protected float _lastDeactivatedTime;
         
         private void Awake()
         {

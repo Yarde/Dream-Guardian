@@ -11,7 +11,7 @@ namespace Code.StressSystem
         public float cutoffStressDecrease;
         
         public float maxStress;
-        public int timeIncrement;
-        public int stressDecrement;
+        public int ticksTimeMilliseconds;
+        public float stressDecrementPerTick;
     }
 }

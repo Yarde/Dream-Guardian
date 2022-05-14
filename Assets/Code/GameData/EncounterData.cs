@@ -6,8 +6,8 @@ namespace Code.StressSystem
     public class EncounterData : ScriptableObject
     {
         public EncounterType type;
-        public float timeToSpawn;
-        public float timeLimit;
+        public float ticksToSpawn;
+        public float ticksToActivate;
         public float stressGeneratedInactive;
         public float stressGeneratedActive;
     }
