@@ -28,10 +28,10 @@ namespace Code.Encounters
 
         private async UniTask StartFlickering()
         {
-            while (!_token.IsCancellationRequested)
+            while (_token != null && !_token.IsCancellationRequested)
             {
-                await lightBulb.DOIntensity(flickerIntensityMax, flickerTime).WithCancellation(_token.Token);
-                await lightBulb.DOIntensity(flickerIntensityMin, flickerTime).WithCancellation(_token.Token);
+                await lightBulb.DOIntensity(flickerIntensityMax, flickerTime);
+                await lightBulb.DOIntensity(flickerIntensityMin, flickerTime);
             }
 
             if (IsEnabled)

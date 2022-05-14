@@ -63,6 +63,7 @@ namespace Code.Encounters
             {
                 _isActive = true;
                 TryCancelAndDispose();
+                _token = new CancellationTokenSource();
                 Activate();
             }
             return _encounterData.stressGeneratedPerTickInactive;

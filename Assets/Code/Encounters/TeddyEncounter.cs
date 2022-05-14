@@ -14,13 +14,19 @@ namespace Code.Encounters
         protected override void Enable()
         {
             base.Enable();
-            teddy.DOShakeRotation(shakeDuration, shakeStrength).WithCancellation(_token.Token);
+            spookyEyes.SetActive(true);
+            if (_token != null && !_token.IsCancellationRequested)
+            {
+                teddy.DOShakeRotation(shakeDuration, new Vector3(0, 0, shakeStrength)).WithCancellation(_token.Token);
+            }
         }
         protected override void Activate()
         {
             base.Activate();
-            spookyEyes.SetActive(true);
-            teddy.DOShakeRotation(shakeDuration, shakeStrength).WithCancellation(_token.Token);
+            if (_token != null && !_token.IsCancellationRequested)
+            {
+                teddy.DOShakePosition(shakeDuration, new Vector3(0, 0, shakeStrength)).WithCancellation(_token.Token);
+            }
         }
         protected override void Disable()
         {
