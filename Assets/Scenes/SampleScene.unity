@@ -251,7 +251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -533,16 +533,10 @@ MonoBehaviour:
   audioSource: {fileID: 1560945850}
   stressThreshold:
   - 0
-  - 10
-  - 20
-  - 30
-  - 40
+  - 50
   musicFiles:
   - {fileID: 8300000, guid: 578fadc6256519640ba546703cef9935, type: 3}
-  - {fileID: 8300000, guid: 40e4d94f47f6e5b47bde8e893ae728c6, type: 3}
-  - {fileID: 8300000, guid: 2c99818a50dc7a941ae5cecaea207dbb, type: 3}
-  - {fileID: 8300000, guid: bff906335637adc48b45bd3b51c7eaa1, type: 3}
-  - {fileID: 8300000, guid: cc83dad6c117ea043964fe58d66a80fb, type: 3}
+  - {fileID: 8300000, guid: f941dfd593e8aba479fcd16d9ff1f838, type: 3}
 --- !u!4 &1560945852
 Transform:
   m_ObjectHideFlags: 0

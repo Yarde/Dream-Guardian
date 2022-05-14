@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 6
   ticksToSpawn: 250
   ticksToActivate: 50
-  stressGeneratedPerTickInactive: 0.1
+  stressGeneratedPerTickInactive: 0.02
   stressGeneratedPerTickActive: 0.5
   spawnCost: 160
   onEnableAudio: {fileID: 8300000, guid: bff906335637adc48b45bd3b51c7eaa1, type: 3}
