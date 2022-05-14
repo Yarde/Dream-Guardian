@@ -20,4 +20,4 @@ MonoBehaviour:
   spawnCost: 180
   onEnableAudio: {fileID: 8300000, guid: 2c99818a50dc7a941ae5cecaea207dbb, type: 3}
   onActiveAudio: {fileID: 8300000, guid: a0f17a373915bcd43b21412bab5f5fa0, type: 3}
-  onDisableAudio: {fileID: 8300000, guid: 2c99818a50dc7a941ae5cecaea207dbb, type: 3}
+  onDisableAudio: {fileID: 8300000, guid: 76f937c4d00cfcf40a265f24480fe456, type: 3}
