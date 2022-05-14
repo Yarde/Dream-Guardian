@@ -9,6 +9,7 @@ namespace Code.StressSystem
         TeddyBear,
         Pony,
         Painting,
-        Rug
+        Rug,
+        Door
     }
 }
