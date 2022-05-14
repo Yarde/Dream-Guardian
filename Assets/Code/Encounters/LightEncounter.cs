@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 
@@ -10,13 +9,11 @@ namespace Code.Encounters
         [SerializeField] private float flickerTime;
         [SerializeField] private float flickerIntensityMin;
         [SerializeField] private float flickerIntensityMax;
-        [SerializeField] private GameObject stateOn;
         [SerializeField] private Light lightBulb;
 
         protected override void Enable()
         {
             base.Enable();
-            stateOn.SetActive(true);
             StartFlickering().Forget();
         }
         protected override void Activate()
@@ -26,7 +23,7 @@ namespace Code.Encounters
         protected override void Disable()
         {
             base.Disable();
-            stateOn.SetActive(false);
+            lightBulb.intensity = 0;
         }
 
         private async UniTask StartFlickering()
@@ -40,6 +37,15 @@ namespace Code.Encounters
                 await UniTask.Delay((int)(flickerTime * 1000));
                 lightBulb.DOIntensity(flickerIntensityMax, flickerTime);
                 await UniTask.Delay((int)(flickerTime * 1000));
+            }
+
+            if (IsEnabled)
+            {
+                lightBulb.intensity = flickerIntensityMax;
+            }
+            else
+            {
+                lightBulb.intensity = 0;
             }
         }
     }
