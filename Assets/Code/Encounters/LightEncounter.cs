@@ -33,5 +33,13 @@ namespace Code.Encounters
                 image.color = Color.cyan;
             }
         }
+        public void OnMouseDown()
+        {
+            Debug.LogError("Click");
+            
+            IsActive = false;
+            IsEnabled = false;
+            image.color = Color.white;
+        }
     }
 }

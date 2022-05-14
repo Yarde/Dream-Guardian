@@ -301,6 +301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 128738520}
   - component: {fileID: 128738521}
+  - component: {fileID: 128738522}
   m_Layer: 5
   m_Name: Light
   m_TagString: Untagged
@@ -339,6 +340,22 @@ MonoBehaviour:
   IsActive: 0
   Type: 0
   image: {fileID: 1481417756}
+--- !u!58 &128738522
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128738519}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!1 &281988264
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,8 +819,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 5.39
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

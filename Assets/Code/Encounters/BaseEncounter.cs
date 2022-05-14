@@ -1,4 +1,5 @@
-﻿using Code.StressSystem;
+﻿using System;
+using Code.StressSystem;
 using UnityEngine;
 
 namespace Code.Encounters
@@ -10,7 +11,7 @@ namespace Code.Encounters
         public EncounterType Type;
         public abstract float GetStress();
         public abstract void TryEnable();
-        
+
         protected EncounterData _encounterData;
         protected float _timeToActive;
         
