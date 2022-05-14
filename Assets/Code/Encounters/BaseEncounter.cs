@@ -82,11 +82,14 @@ namespace Code.Encounters
         
         public void OnMouseDown()
         {
-            _lastDeactivatedTime = StressManager.Instance.TimePassed;
-            _isActive = false;
-            _isEnabled = false;
-            Disable();
-            TryCancelAndDispose();
+            if (_isActive || _isEnabled)
+            {
+                _lastDeactivatedTime = StressManager.Instance.TimePassed;
+                _isActive = false;
+                _isEnabled = false;
+                Disable();
+                TryCancelAndDispose();
+            }
         }
 
         private void TryCancelAndDispose()
