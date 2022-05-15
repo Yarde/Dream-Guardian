@@ -24,7 +24,7 @@ namespace Code.PlayerHand
         
         private void OnStressUpdate()
         {
-            roomPosition.DOLocalMove(new Vector3(roomPosition.position.x, roomPosition.position.y, 14.13f + StressManager.Instance.StressMeter / 25), 0.1f);
+            roomPosition.DOLocalMove(new Vector3(roomPosition.position.x, roomPosition.position.y, 14.13f + StressManager.Instance.StressMeter / 25), 5f);
         }
 
         private void Update()
