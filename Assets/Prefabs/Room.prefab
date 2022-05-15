@@ -5291,7 +5291,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fog: {fileID: 2033169134157216885}
   goodRoom: {fileID: 2033169135046390343}
-  roomPosition: {fileID: 0}
+  roomPosition: {fileID: 2033169135047842143}
 --- !u!1 &2033169135046390343
 GameObject:
   m_ObjectHideFlags: 0

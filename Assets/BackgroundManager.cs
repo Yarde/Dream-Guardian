@@ -26,9 +26,10 @@ public class BackgroundManager : MonoBehaviour
     
     private void OnGameWin()
     {
-        goodRoom.SetActive(false);
+        goodRoom.SetActive(true);
         fog.SetActive(false);
         roomPosition.DOLocalMove(new Vector3(0, -0.67f, 7f), 5f);
+        RenderSettings.ambientLight = Color.white;
     }
 
     private void OnStressUpdate()
