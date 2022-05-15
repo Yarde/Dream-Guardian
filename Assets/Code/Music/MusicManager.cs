@@ -7,25 +7,24 @@ namespace Code.Music
     public class MusicManager : MonoBehaviour
     {
         [SerializeField] private AudioSource audioSource;
-        [SerializeField] private List<float> stressThreshold;
+        [SerializeField] private List<float> tickThreshold;
         [SerializeField] private List<AudioClip> musicFiles;
 
         private void Start()
         {
-            audioSource.clip = musicFiles[0];
             audioSource.Play();
 
-            StressManager.Instance.OnStressUpdated += OnStressChanged;
+            StressManager.Instance.OnClockTick += OnClockTick;
         }
         
-        private void OnStressChanged()
+        private void OnClockTick()
         {
             AudioClip clip = musicFiles[0];
 
-            for (var i = 0; i < stressThreshold.Count; i++)
+            for (var i = 0; i < tickThreshold.Count; i++)
             {
-                float stressLevel = stressThreshold[i];
-                if (StressManager.Instance.StressMeter > stressLevel)
+                float threshold = tickThreshold[i];
+                if (StressManager.Instance.TimePassed > threshold)
                 {
                     clip = musicFiles[i];
                 }

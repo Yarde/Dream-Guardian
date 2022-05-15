@@ -16,7 +16,7 @@ MonoBehaviour:
   cutoffSize: 3
   cutoffStressDecrease: 0.01
   maxStress: 100
-  ticksToWin: 1800
+  ticksToWin: 2500
   ticksTimeMilliseconds: 100
   stressDecrementPerTick: 0.1
   spawnProbabilityIncrementPerTick: 1
