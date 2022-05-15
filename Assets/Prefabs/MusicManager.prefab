@@ -48,11 +48,13 @@ MonoBehaviour:
   tickThreshold:
   - 0
   - 120
-  - 720
+  - 1020
   musicFiles:
   - {fileID: 8300000, guid: 69904e7719c81b540af23c5dc7940667, type: 3}
   - {fileID: 8300000, guid: 578fadc6256519640ba546703cef9935, type: 3}
   - {fileID: 8300000, guid: f941dfd593e8aba479fcd16d9ff1f838, type: 3}
+  winMusic: {fileID: 8300000, guid: f8eaab75d39535c428414d1febb808db, type: 3}
+  lossMusic: {fileID: 0}
 --- !u!82 &668661573954850302
 AudioSource:
   m_ObjectHideFlags: 0
