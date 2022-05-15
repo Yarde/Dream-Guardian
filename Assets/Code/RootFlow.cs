@@ -14,6 +14,8 @@ namespace Code
 
         private void Start()
         {
+            Cursor.visible = false;
+            
             _stressManager = StressManager.Instance;
             _stressManager.OnWin += OnWin;
             _stressManager.OnLost += OnLost;

@@ -801,6 +801,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room
       objectReference: {fileID: 0}
+    - target: {fileID: 2033169135046390343, guid: e884c0a201b60e349839940c89bf2547, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2033169135047842143, guid: e884c0a201b60e349839940c89bf2547, type: 3}
       propertyPath: m_RootOrder
       value: 1

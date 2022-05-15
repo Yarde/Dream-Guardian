@@ -15,6 +15,7 @@ public class BackgroundManager : MonoBehaviour
         StressManager.Instance.OnWin += OnGameWin;
         
         fog.SetActive(false);
+        goodRoom.SetActive(true);
     }
     
     private void OnGameStarted()
