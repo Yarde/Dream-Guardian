@@ -48,9 +48,17 @@ namespace Code
                 RenderSettings.ambientLight = new Color(i/255f, i/255f, i/255f);
                 await UniTask.Delay(12);
             }
-            introScreen.SetActive(false);
+            
+            await UniTask.Delay(500);
 
+            for (int i = 0; i < _stressManager.AmbientLight.r * 255; i++)
+            {
+                RenderSettings.ambientLight = new Color(i/255f, i/255f, i/255f);
+                await UniTask.Delay(25);
+            }
+            
             RenderSettings.ambientLight = _stressManager.AmbientLight;
+            introScreen.SetActive(false);
         }
         
         public void OnWin()
