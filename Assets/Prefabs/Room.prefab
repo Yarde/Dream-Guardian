@@ -5886,19 +5886,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1375785000658784103, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
       propertyPath: m_Size.x
-      value: 3.5331087
+      value: 3.7801838
       objectReference: {fileID: 0}
     - target: {fileID: 1375785000658784103, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
       propertyPath: m_Size.y
-      value: 4.2311735
+      value: 3.6701279
       objectReference: {fileID: 0}
     - target: {fileID: 1375785000658784103, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
       propertyPath: m_Offset.x
-      value: 0.112041
+      value: -1.0289755
       objectReference: {fileID: 0}
     - target: {fileID: 1375785000658784103, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
       propertyPath: m_Offset.y
-      value: 0.047237873
+      value: -0.17404747
       objectReference: {fileID: 0}
     - target: {fileID: 1375785000848683772, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
       propertyPath: m_SortingOrder
@@ -6287,22 +6287,6 @@ PrefabInstance:
     - target: {fileID: 1375785000658784102, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
       propertyPath: colorRed.r
       value: 0.8679245
-      objectReference: {fileID: 0}
-    - target: {fileID: 1375785000658784103, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
-      propertyPath: m_Size.x
-      value: 3.5331087
-      objectReference: {fileID: 0}
-    - target: {fileID: 1375785000658784103, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
-      propertyPath: m_Size.y
-      value: 4.2311735
-      objectReference: {fileID: 0}
-    - target: {fileID: 1375785000658784103, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.112041
-      objectReference: {fileID: 0}
-    - target: {fileID: 1375785000658784103, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.047237873
       objectReference: {fileID: 0}
     - target: {fileID: 1375785000848683772, guid: 63fb80c94b70a5e4db823a666f70eb3b, type: 3}
       propertyPath: m_SortingOrder
