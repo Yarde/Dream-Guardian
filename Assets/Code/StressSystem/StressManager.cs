@@ -27,6 +27,7 @@ namespace Code.StressSystem
 
         public Action OnClockTick { get; set; }
         public Action OnStressUpdated { get; set; }
+        public Action OnWin { get; set; }
         public Action OnLost { get; set; }
         
         public StressManager()
@@ -73,6 +74,13 @@ namespace Code.StressSystem
         public void ClockTick()
         {
             TimePassed++;
+            if (TimePassed >= _difficultyData.ticksToWin)
+            {
+                Debug.LogError("You won!");
+                OnWin?.Invoke();
+                return;
+            }
+            
             StressMeter = Mathf.Max(StressMeter - _difficultyData.stressDecrementPerTick, 0);
             _spawnProbability += _difficultyData.spawnProbabilityIncrementPerTick + TimePassed * _difficultyData.spawnProbabilityMultiplier;
             
