@@ -33,7 +33,10 @@ namespace Code.PlayerHand
         private void Update()
         {
             transform.localPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition.WithZ(roomPosition.position.z)).WithZ(-3f);
-            hand.transform.localPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition.WithZ(roomPosition.position.z)).WithZ(17.1f);
+            var localPosition = hand.transform.localPosition;
+            localPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition.WithZ(roomPosition.position.z));
+            localPosition = new Vector3(localPosition.x + 0.3f, localPosition.y - 0.2f, roomPosition.position.z + 3f);
+            hand.transform.localPosition = localPosition;
 
             hand.sprite = Input.GetMouseButton(0) ? handClosed : handOpen;
         }
