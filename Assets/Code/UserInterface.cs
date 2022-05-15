@@ -1,5 +1,4 @@
-﻿using System;
-using Code.StressSystem;
+﻿using Code.StressSystem;
 using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
@@ -44,7 +43,7 @@ namespace Code
             introScreen.SetActive(true);
             await UniTask.Delay(1000);
 
-            for (int i = 255; i > 15; i--)
+            for (int i = 255; i >= 0; i--)
             {
                 RenderSettings.ambientLight = new Color(i/255f, i/255f, i/255f);
                 await UniTask.Delay(12);
