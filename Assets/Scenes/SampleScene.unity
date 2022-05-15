@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 1965507173}
+  isInfinite: 0
 --- !u!4 &392052706
 Transform:
   m_ObjectHideFlags: 0
@@ -782,6 +783,14 @@ PrefabInstance:
       value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 938631472497234265, guid: e884c0a201b60e349839940c89bf2547, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 938631472497234265, guid: e884c0a201b60e349839940c89bf2547, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 938631472497234265, guid: e884c0a201b60e349839940c89bf2547, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.3
       objectReference: {fileID: 0}
@@ -789,10 +798,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 2033169134157216880, guid: e884c0a201b60e349839940c89bf2547, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033169134157216880, guid: e884c0a201b60e349839940c89bf2547, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2033169134517032394, guid: e884c0a201b60e349839940c89bf2547, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 2033169134625326278, guid: e884c0a201b60e349839940c89bf2547, type: 3}
+      propertyPath: handOpen
+      value: 
+      objectReference: {fileID: 21300000, guid: 86cb95bfc48f3bf4bb1e2e336a8dba8e, type: 3}
+    - target: {fileID: 2033169134625326278, guid: e884c0a201b60e349839940c89bf2547, type: 3}
+      propertyPath: handClosed
+      value: 
+      objectReference: {fileID: 21300000, guid: a40e903e2dde56847bc310727356bd43, type: 3}
     - target: {fileID: 2033169134625326278, guid: e884c0a201b60e349839940c89bf2547, type: 3}
       propertyPath: mainCamera
       value: 
@@ -868,6 +893,14 @@ PrefabInstance:
     - target: {fileID: 3840837275033872638, guid: e884c0a201b60e349839940c89bf2547, type: 3}
       propertyPath: m_Color.r
       value: 0.21176471
+      objectReference: {fileID: 0}
+    - target: {fileID: 4245023215630705473, guid: e884c0a201b60e349839940c89bf2547, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86cb95bfc48f3bf4bb1e2e336a8dba8e, type: 3}
+    - target: {fileID: 4245023215630705473, guid: e884c0a201b60e349839940c89bf2547, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6286952470634872556, guid: e884c0a201b60e349839940c89bf2547, type: 3}
       propertyPath: m_Materials.Array.data[0]

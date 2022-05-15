@@ -7,6 +7,8 @@ namespace Code.StressSystem
 {
     public class StressManager
     {
+        public static bool Infinite;
+        
         private static StressManager _instance;
         public static StressManager Instance {
             get
@@ -33,7 +35,14 @@ namespace Code.StressSystem
         public StressManager()
         {
             _encountersData = Resources.Load<EncountersData>("Encounters/EncountersData");
-            _difficultyData = Resources.Load<DifficultyData>("Difficulty/Medium");
+            if (Infinite)
+            {
+                _difficultyData = Resources.Load<DifficultyData>("Difficulty/Infinite");
+            }
+            else
+            {
+                _difficultyData = Resources.Load<DifficultyData>("Difficulty/Winnable");
+            }
 
             EncounterTypeToData = new Dictionary<EncounterType, EncounterData>();
             foreach (var encounter in _encountersData.encounters)
