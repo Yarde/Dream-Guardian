@@ -1,9 +1,7 @@
 ﻿using System.Threading;
 using Code.StressSystem;
 using Cysharp.Threading.Tasks;
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Code
 {
@@ -12,14 +10,14 @@ namespace Code
         private StressManager _stressManager;
         private CancellationTokenSource _cancellationToken;
 
-        [SerializeField] private GameObject introScreen;
-        [SerializeField] private GameObject loseScreen;
-        [SerializeField] private TextMeshProUGUI points;
+        [SerializeField] private UserInterface ui;
 
         private void Start()
         {
             _stressManager = StressManager.Instance;
+            _stressManager.OnWin += OnWin;
             _stressManager.OnLost += OnLost;
+            
             StartGame();
         }
         
@@ -29,36 +27,25 @@ namespace Code
             RunLoop().Forget();
         }
 
+        private void OnWin()
+        {
+            _cancellationToken.Cancel();
+            _cancellationToken.Dispose();
+            
+            ui.OnWin();
+        }
+
         private void OnLost()
         {
             _cancellationToken.Cancel();
             _cancellationToken.Dispose();
 
-            ShowLostScreen().Forget();
-        }
-        
-        private async UniTask ShowLostScreen()
-        {
-            loseScreen.SetActive(true);
-            points.text = $"Time Lasted: {_stressManager.TimePassed*(_stressManager.TimeIncrement/1000f)} seconds";
-            await UniTask.Delay(10000);
-            _stressManager.Restart();
-            SceneManager.LoadScene(0);
+            ui.OnLost();
         }
 
         private async UniTask RunLoop()
         {
-            RenderSettings.ambientLight = Color.white;
-            
-            introScreen.SetActive(true);
-            await UniTask.Delay(1000);
-
-            for (int i = 255; i > 15; i--)
-            {
-                RenderSettings.ambientLight = new Color(i/255f, i/255f, i/255f);
-                await UniTask.Delay(10);
-            }
-            introScreen.SetActive(false);
+            await ui.Intro();
 
             while (!_cancellationToken.IsCancellationRequested)
             {
