@@ -6,7 +6,6 @@ namespace Code.Encounters
 {
     public class WindowEncounter : BaseEncounter
     {
-        [SerializeField] private Transform window;
         [SerializeField] private float duration;
         [SerializeField] private float closeIntensity;
         [SerializeField] private float ajarIntensity;
@@ -16,7 +15,6 @@ namespace Code.Encounters
         [SerializeField] private Color colorNormal;
         [SerializeField] private Color colorRed;
         
-        [SerializeField] private SpriteRenderer closed;
         [SerializeField] private SpriteRenderer ajar;
         [SerializeField] private SpriteRenderer open;
 
@@ -41,10 +39,11 @@ namespace Code.Encounters
         {
             base.Disable();
             ajar.DOFade(0f, 0f);
-            open.gameObject.SetActive(true);
             open.DOFade(0f, 0f);
             outsideLight.intensity = closeIntensity;
             outsideLight.color = colorNormal;
+            ajar.gameObject.SetActive(false);
+            open.gameObject.SetActive(false);
         }
     }
 }
