@@ -53,8 +53,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 69904e7719c81b540af23c5dc7940667, type: 3}
   - {fileID: 8300000, guid: 578fadc6256519640ba546703cef9935, type: 3}
   - {fileID: 8300000, guid: f941dfd593e8aba479fcd16d9ff1f838, type: 3}
-  winMusic: {fileID: 8300000, guid: f8eaab75d39535c428414d1febb808db, type: 3}
-  lossMusic: {fileID: 0}
+  winMusic: {fileID: 8300000, guid: e8a6d2ba03192f3449d12f63c6737b5f, type: 3}
+  lossMusic: {fileID: 8300000, guid: f8eaab75d39535c428414d1febb808db, type: 3}
 --- !u!82 &668661573954850302
 AudioSource:
   m_ObjectHideFlags: 0
