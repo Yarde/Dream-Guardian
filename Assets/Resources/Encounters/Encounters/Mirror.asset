@@ -19,5 +19,5 @@ MonoBehaviour:
   stressGeneratedPerTickActive: 0.5
   spawnCost: 180
   onEnableAudio: {fileID: 8300000, guid: 8bad831fad33da644920f0bda735d590, type: 3}
-  onActiveAudio: {fileID: 8300000, guid: 4da6fd8fb2d5dcb42aae28b1780449e1, type: 3}
-  onDisableAudio: {fileID: 8300000, guid: 906b87763939fb14f91482535c80d8e8, type: 3}
+  onActiveAudio: {fileID: 8300000, guid: f200838fcda9fbc4484c659ba6ddf289, type: 3}
+  onDisableAudio: {fileID: 0}
