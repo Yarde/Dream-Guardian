@@ -18,6 +18,6 @@ MonoBehaviour:
   stressGeneratedPerTickInactive: 0.02
   stressGeneratedPerTickActive: 0.5
   spawnCost: 180
-  onEnableAudio: {fileID: 8300000, guid: 2c99818a50dc7a941ae5cecaea207dbb, type: 3}
-  onActiveAudio: {fileID: 8300000, guid: a0f17a373915bcd43b21412bab5f5fa0, type: 3}
-  onDisableAudio: {fileID: 8300000, guid: 76f937c4d00cfcf40a265f24480fe456, type: 3}
+  onEnableAudio: {fileID: 8300000, guid: 2a567f2367ccb524c8db22c6dd25dd2f, type: 3}
+  onActiveAudio: {fileID: 8300000, guid: 529998a2a599aff45a3e0ac11fd99411, type: 3}
+  onDisableAudio: {fileID: 8300000, guid: 76b9b7720a80fe348b207d570d967361, type: 3}
