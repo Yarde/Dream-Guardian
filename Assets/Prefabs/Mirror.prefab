@@ -9935,7 +9935,9 @@ GameObject:
   - component: {fileID: 8145063465865265911}
   - component: {fileID: 8145063465865265896}
   - component: {fileID: 8145063465865265910}
-  - component: {fileID: 6620375203520913877}
+  - component: {fileID: 5997515519505320894}
+  - component: {fileID: 2128351554406106498}
+  - component: {fileID: 7273699649624868379}
   m_Layer: 0
   m_Name: Mirror
   m_TagString: Untagged
@@ -10072,7 +10074,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!70 &6620375203520913877
+--- !u!70 &5997515519505320894
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10085,8 +10087,40 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.24126959, y: -0.12676358}
-  m_Size: {x: 4.8962145, y: 4.8962145}
+  m_Offset: {x: 1.3048863, y: -0.8203361}
+  m_Size: {x: 2.5817842, y: 2.5817842}
+  m_Direction: 0
+--- !u!70 &2128351554406106498
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8145063465865265908}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.10425305, y: -0.14367783}
+  m_Size: {x: 2.8372416, y: 2.8372416}
+  m_Direction: 0
+--- !u!70 &7273699649624868379
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8145063465865265908}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.1351128, y: 0.8333051}
+  m_Size: {x: 1.7650394, y: 1.7650394}
   m_Direction: 0
 --- !u!1 &8145063466062433366
 GameObject:

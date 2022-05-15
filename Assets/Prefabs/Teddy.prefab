@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 1471801100313321795}
   - component: {fileID: 1471801100313321798}
   - component: {fileID: 1471801100313321797}
-  - component: {fileID: 1471801100313321796}
+  - component: {fileID: 8661729719630546371}
   m_Layer: 0
   m_Name: Teddy
   m_TagString: Untagged
@@ -242,8 +242,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!61 &1471801100313321796
-BoxCollider2D:
+--- !u!70 &8661729719630546371
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -255,19 +255,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.008634329, y: 0.08169603}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.7096477, y: 3.185215}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.12524915, y: 0.0068728924}
+  m_Size: {x: 2.4370894, y: 2.9868197}
+  m_Direction: 0
 --- !u!1 &1471801100582409888
 GameObject:
   m_ObjectHideFlags: 0

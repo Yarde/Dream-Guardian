@@ -152,7 +152,7 @@ MonoBehaviour:
   openIntensity: 2.1
   outsideLight: {fileID: 1375785000111728151}
   colorNormal: {r: 0.21176471, g: 0.43137255, b: 0.8784314, a: 0}
-  colorRed: {r: 0.7924528, g: 0.115877524, b: 0.115877524, a: 0}
+  colorRed: {r: 0.8679245, g: 0.20060521, b: 0.20060521, a: 0}
   closed: {fileID: 72804133189556047}
   ajar: {fileID: 1375785000848683772}
   open: {fileID: 7941990409745786059}
@@ -169,7 +169,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.7447367, y: -0.0034478903}
+  m_Offset: {x: -1.048151, y: -0.18832558}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -180,7 +180,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2858047, y: 1.4941359}
+  m_Size: {x: 3.6892986, y: 3.7600465}
   m_EdgeRadius: 0
 --- !u!82 &1375785000658784096
 AudioSource:
@@ -191,7 +191,7 @@ AudioSource:
   m_GameObject: {fileID: 1375785000658784098}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7554531680556305359, guid: 08bf6c353b2eca843a510deaf02d9691, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

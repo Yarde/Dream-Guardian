@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 247859848760774025}
   - component: {fileID: 247859848760774030}
   - component: {fileID: 247859848760774031}
+  - component: {fileID: 1715567555657501858}
   m_Layer: 0
   m_Name: Pony
   m_TagString: Untagged
@@ -150,7 +151,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.23408794, y: 0.07315242}
+  m_Offset: {x: -0.041890144, y: -0.7936263}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -161,7 +162,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.0431423, y: 4.072403}
+  m_Size: {x: 4.073105, y: 2.3589454}
   m_EdgeRadius: 0
 --- !u!82 &247859848760774031
 AudioSource:
@@ -172,7 +173,7 @@ AudioSource:
   m_GameObject: {fileID: 247859848760774029}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7554531680556305359, guid: 08bf6c353b2eca843a510deaf02d9691, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -259,6 +260,32 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!61 &1715567555657501858
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247859848760774029}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.0155083, y: 0.76276124}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.1922867, y: 2.5255225}
+  m_EdgeRadius: 0
 --- !u!1 &6954260923569385628
 GameObject:
   m_ObjectHideFlags: 0
