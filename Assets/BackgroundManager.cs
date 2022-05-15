@@ -11,6 +11,8 @@ public class BackgroundManager : MonoBehaviour
         StressManager.Instance.OnStressUpdated += OnStressUpdate;
         StressManager.Instance.OnClockTick += OnGameStarted;
         StressManager.Instance.OnWin += OnGameStarted;
+        
+        fog.SetActive(false);
     }
     
     private void OnGameStarted()

@@ -49,6 +49,8 @@ namespace Code
                 await UniTask.Delay(12);
             }
             introScreen.SetActive(false);
+
+            RenderSettings.ambientLight = _stressManager.AmbientLight;
         }
         
         public void OnWin()

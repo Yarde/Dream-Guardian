@@ -40,9 +40,9 @@ namespace Code.StressSystem
             {
                 EncounterTypeToData.Add(encounter.type, encounter);
             }
-
-            RenderSettings.ambientLight = _difficultyData.blendColor;
         }
+
+        public Color AmbientLight => _difficultyData.blendColor;
         
         public float StressMeter { get; private set; }
         public float StressRatio => StressMeter / _difficultyData.maxStress;
