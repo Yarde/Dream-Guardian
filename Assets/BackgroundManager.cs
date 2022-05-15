@@ -28,7 +28,7 @@ public class BackgroundManager : MonoBehaviour
     {
         goodRoom.SetActive(false);
         fog.SetActive(false);
-        roomPosition.DOLocalMove(new Vector3(0, -0.67f, 7f), 0.01f);
+        roomPosition.DOLocalMove(new Vector3(0, -0.67f, 7f), 5f);
     }
 
     private void OnStressUpdate()
