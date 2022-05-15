@@ -11,6 +11,13 @@ namespace Code.Encounters
         [SerializeField] private float shakeDuration;
         [SerializeField] private float shakeStrength;
 
+        private Vector3 _startPosition;
+
+        private void Start()
+        {
+            _startPosition = teddy.localPosition;
+        }
+
         protected override void Enable()
         {
             base.Enable();
@@ -31,6 +38,7 @@ namespace Code.Encounters
         protected override void Disable()
         {
             base.Disable();
+            teddy.DOLocalMove(_startPosition, 0.2f);
             spookyEyes.SetActive(false);
         }
     }

@@ -15,12 +15,12 @@ namespace Code.Encounters
             rugWithHand.gameObject.SetActive(true);
             rugWithHand.DOFade(0f, 0f);
             rugWithHand.DOFade(1f, 0.2f);
+            rug.SetActive(false);
         }
 
         protected override void Activate()
         {
             base.Activate();
-            rug.SetActive(false);
             rugWithHand.gameObject.SetActive(false);
             handOnBlanket.SetActive(true);
         }
