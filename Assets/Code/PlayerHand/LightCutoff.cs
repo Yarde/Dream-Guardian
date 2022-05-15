@@ -8,6 +8,9 @@ namespace Code.PlayerHand
     public class LightCutoff : MonoBehaviour
     {
         [SerializeField] private Transform roomPosition;
+        [SerializeField] private SpriteRenderer hand;
+        [SerializeField] private Sprite handOpen;
+        [SerializeField] private Sprite handClosed;
         [SerializeField] private Camera mainCamera;
         [SerializeField] private Light playerLight;
         [SerializeField] private float baseIntensity;
@@ -30,6 +33,9 @@ namespace Code.PlayerHand
         private void Update()
         {
             transform.localPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition.WithZ(roomPosition.position.z)).WithZ(-3f);
+            hand.transform.localPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition.WithZ(roomPosition.position.z)).WithZ(17.1f);
+
+            hand.sprite = Input.GetMouseButton(0) ? handClosed : handOpen;
         }
     }
 }
