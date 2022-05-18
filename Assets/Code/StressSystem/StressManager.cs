@@ -7,21 +7,8 @@ namespace Code.StressSystem
 {
     public class StressManager
     {
-        public static bool Infinite;
-        
-        private static StressManager _instance;
-        public static StressManager Instance {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = new StressManager();
-                }
-                return _instance;
-            }
-        }
-        
-        private EncountersData _encountersData;
+        public static StressManager Instance { get; set; }
+
         private DifficultyData _difficultyData;
         private float _spawnProbability = 160;
 
@@ -32,20 +19,12 @@ namespace Code.StressSystem
         public Action OnWin { get; set; }
         public Action OnLost { get; set; }
         
-        public StressManager()
+        public StressManager(string setting)
         {
-            _encountersData = Resources.Load<EncountersData>("Encounters/EncountersData");
-            if (Infinite)
-            {
-                _difficultyData = Resources.Load<DifficultyData>("Difficulty/Infinite");
-            }
-            else
-            {
-                _difficultyData = Resources.Load<DifficultyData>("Difficulty/Winnable");
-            }
+            _difficultyData = Resources.Load<DifficultyData>($"Difficulty/{setting}");
 
             EncounterTypeToData = new Dictionary<EncounterType, EncounterData>();
-            foreach (var encounter in _encountersData.encounters)
+            foreach (var encounter in _difficultyData.encounters)
             {
                 EncounterTypeToData.Add(encounter.type, encounter);
             }
@@ -63,7 +42,7 @@ namespace Code.StressSystem
 
         public void Restart()
         {
-            _instance = null;
+            Instance = null;
         }
         
         public bool CanSpawn(float spawnCost, float lastDeactivatedTime)

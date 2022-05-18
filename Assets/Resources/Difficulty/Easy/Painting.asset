@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 459645eddc2b4cd9866e5b1d1b206b36, type: 3}
+  m_Name: Painting
+  m_EditorClassIdentifier: 
+  type: 6
+  ticksToSpawn: 450
+  ticksToActivate: 50
+  stressGeneratedPerTickInactive: 0.01
+  stressGeneratedPerTickActive: 0.3
+  spawnCost: 160
+  onEnableAudio: {fileID: 8300000, guid: 2401424638915f749a98e6999d2072e5, type: 3}
+  onActiveAudio: {fileID: 8300000, guid: 23a501161286edb48a6dc6bce544c91e, type: 3}
+  onDisableAudio: {fileID: 8300000, guid: bff906335637adc48b45bd3b51c7eaa1, type: 3}

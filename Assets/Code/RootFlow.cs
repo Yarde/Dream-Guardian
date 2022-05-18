@@ -11,22 +11,19 @@ namespace Code
         private CancellationTokenSource _cancellationToken;
 
         [SerializeField] private UserInterface ui;
-        [SerializeField] private bool isInfinite;
-
+        
         private void Start()
         {
             Cursor.visible = false;
-
-            StressManager.Infinite = isInfinite;
-            _stressManager = StressManager.Instance;
-            _stressManager.OnWin += OnWin;
-            _stressManager.OnLost += OnLost;
-            
             StartGame();
         }
         
         private void StartGame()
         {
+            _stressManager = StressManager.Instance;
+            _stressManager.OnWin += OnWin;
+            _stressManager.OnLost += OnLost;
+            
             _cancellationToken = new CancellationTokenSource();
             RunLoop().Forget();
         }

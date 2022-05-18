@@ -9,9 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e792fc066ed94406964c02e63aa3723b, type: 3}
-  m_Name: EncountersData
+  m_Script: {fileID: 11500000, guid: 182d7e1cc6274cc29fdfc6194aa64f47, type: 3}
+  m_Name: Hard
   m_EditorClassIdentifier: 
+  blendColor: {r: 0, g: 0, b: 0, a: 1}
+  cutoffSize: 3
+  cutoffStressDecrease: 0.01
+  maxStress: 50
+  ticksToWin: 3000
+  ticksTimeMilliseconds: 100
+  stressDecrementPerTick: 0.1
+  spawnProbabilityIncrementPerTick: 2
+  spawnProbabilityMultiplier: 0.01
   encounters:
   - {fileID: 11400000, guid: 94bb939da28f1db408b1656c727690dd, type: 2}
   - {fileID: 11400000, guid: 8a651a66fa2c5fb46968d43237743026, type: 2}

@@ -16,5 +16,6 @@ namespace Code.StressSystem
         public float stressDecrementPerTick;
         public float spawnProbabilityIncrementPerTick;
         public float spawnProbabilityMultiplier;
+        public EncounterData[] encounters;
     }
 }

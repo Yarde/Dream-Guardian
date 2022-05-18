@@ -63,12 +63,14 @@ namespace Code
         
         public void OnWin()
         {
+            Cursor.visible = true;
             winScreen.SetActive(true);
             tryAgainButton.gameObject.SetActive(true);
         }
         
         public void OnLost()
         {
+            Cursor.visible = true;
             points.text = $"Time Lasted: {_stressManager.TimePassed*(_stressManager.TimeIncrement/1000f)} seconds";
             loseScreen.gameObject.SetActive(true);
             tryAgainButton.gameObject.SetActive(true);

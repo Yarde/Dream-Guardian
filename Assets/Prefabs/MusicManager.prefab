@@ -47,7 +47,7 @@ MonoBehaviour:
   audioSource: {fileID: 668661573954850302}
   tickThreshold:
   - 0
-  - 120
+  - 107
   - 1020
   musicFiles:
   - {fileID: 8300000, guid: 69904e7719c81b540af23c5dc7940667, type: 3}
